@@ -1,0 +1,102 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.text {
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-light {
+    font-weight: 300;
+  }
+
+  &-regular {
+    font-weight: 400;
+  }
+
+  &-medium {
+    font-weight: 500;
+  }
+
+  &-semibold {
+    font-weight: 600;
+  }
+
+  &-bold {
+    font-weight: 700;
+  }
+
+  &-extrabold {
+    font-weight: 800;
+  }
+}
+
+
+.heading {
+  padding-bottom: 26px;
+
+  &.decor {
+    &:after {
+      content: '';
+      width: 142px;
+      height: 4px;
+      background: #FEF338;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}
+
+.h1 {
+  @include fontSize(40, 60);
+}
+
+.h2 {
+  @include fontSize(27, 40);
+}
+
+.h3 {
+  @include fontSize(30, 35);
+}
+
+
+.text{
+  @include fontSize(16, 18);
+}
+
+.icon-ar-left:before {
+  content: "\e903";
+}
+.icon-ar-right:before {
+  content: "\e904";
+}
+.icon-ar-top:before {
+  content: "\e905";
+}
+.icon-telegram:before {
+  content: "\e900";
+}
+.icon-whatsapp:before {
+  content: "\e901";
+}
+.icon-viber:before {
+  content: "\e902";
+}

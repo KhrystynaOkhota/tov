@@ -1,0 +1,55 @@
+@import "../abstracts/mixins";
+@import "../abstracts/variables";
+
+.btn {
+  position: relative;
+  box-shadow: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+
+  font-size: 17px;
+  line-height: 100%;
+  padding: 14px 0 15px 0;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  min-width: 142px;
+  @include transition(.5);
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    background: #FEF338;
+    color: #01203D;
+
+    & i {
+      position: absolute;
+      right:15px;
+      top:50%;
+      transform: translateY(-50%);
+      font-size: 17px;
+      color: rgba(1, 32, 61, 1);
+    }
+
+    &:hover {
+
+    }
+  }
+
+  &-transparent {
+    border-color: #960001;
+    color: #960001;
+    padding: 14px 0 15px 0;
+
+    &:hover {
+
+    }
+  }
+}
+
+
