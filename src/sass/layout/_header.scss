@@ -125,13 +125,13 @@
       padding-right: 15px;
       &:before {
         content: '';
-        width: 96%;
+        width: calc(100% - 20px);
         height: 88%;
         background: #fff;
         border-radius: 10px;
         position: absolute;
         top: 6%;
-        left: 2%;
+        left: 10px;
         z-index: -1;
       }
     }
@@ -191,9 +191,10 @@
     @media (max-width: $breakpoint-lg) {
       order: 1;
       margin-top: 0;
+      padding: 36px 0 36px 0;
     }
     @media (max-width: $breakpoint-xl) {
-      padding: 36px 0 36px 0;
+
     }
 
     & .menu {

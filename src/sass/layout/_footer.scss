@@ -86,6 +86,9 @@
     }
 
     & .develop {
+      @media (max-width: $breakpoint-lg) {
+       margin-top:10px;
+      }
       &__text, &__link {
         @include fontSize(13, 16);
         @media (max-width: $breakpoint-lg) {
@@ -111,7 +114,8 @@
 
     & .develop, & .footer-links {
       @media (max-width: $breakpoint-lg) {
-        justify-content: center;
+        justify-content: left;
+        width: 100%;
       }
     }
   }
@@ -149,6 +153,7 @@
         @media (max-width: $breakpoint-lg) {
           display: flex;
           margin-bottom: 20px;
+          align-items: center;
         }
 
         & .title {
@@ -164,6 +169,9 @@
 
   & .social {
     &__list {
+      @media (max-width: $breakpoint-lg) {
+        margin-left: 15px;
+      }
       @media (min-width: $breakpoint-lg) {
         -webkit-box-pack: end;
         -webkit-justify-content: flex-end;
@@ -178,6 +186,7 @@
           &-telegram {
             font-size: 18px;
           }
+
           &-viber {
             font-size: 23px;
           }
