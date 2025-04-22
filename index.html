@@ -19,11 +19,19 @@
 
 
 <header class="header js-header">
-    <div class=" container">
-        <a href="index.html" class="logo__wrap ">
+    <div class=" container d-flex align-justify align-middle">
+        <a href="index.html" class="logo__wrap overlap">
             <img src="assets/img/logo.svg" alt="Карпати-Арх-Проект" class="logo">
         </a>
-        <div class="burger__wrap h-burger d-block d-lg-none">
+
+        <div class="contact-links__wrapp d-block d-lg-none">
+            <div class="h6 title">Телефон:</div>
+            <ul class="contact-links">
+                <li><a href="">
+                    (067) 676-70-18</a></li>
+            </ul>
+        </div>
+        <div class="burger__wrap h-burger d-flex d-lg-none">
             <div class="burger">
                 <span></span>
                 <span></span>
@@ -32,7 +40,7 @@
         </div>
 
         <div class="header__inner ">
-            <div class="header__top d-flex align-justify align-middle">
+            <div class="header__top d-block d-lg-flex align-justify align-middle">
 
                 <div class="contact-links__wrapp">
                     <div class="h6 title">Адрес:</div>
@@ -43,8 +51,26 @@
                 <div class="contact-links__wrapp">
                     <div class="h6 title">Телефон:</div>
                     <ul class="contact-links">
-                        <li><a href="">Телефон:
+                        <li><a href="">
                             (067) 676-70-18</a></li>
+                    </ul>
+
+                    <ul class="social__list d-flex align-center d-lg-none">
+                        <li class="social__item">
+                            <a href="" class="social__link d-flex align-center align-middle">
+                                <i class="icon-telegram"></i>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a href="" class="social__link d-flex align-center align-middle">
+                                <i class="icon-whatsapp"></i>
+                            </a>
+                        </li>
+                        <li class="social__item ">
+                            <a href="" class="social__link d-flex align-center align-middle">
+                                <i class="icon-viber"></i>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="contact-links__wrapp">
@@ -53,7 +79,12 @@
                         <li>Сб-Нд - вихідні</li>
                     </ul>
                 </div>
-                <ul class="social__list d-flex ">
+
+                <a href="" class="btn-consultation open-popup d-md-inline-block d-lg-none" data-rel="cta">Замовити
+                    дзвінок <i class="icon-ar-top"></i> </a>
+
+
+                <ul class="social__list d-none d-lg-flex ">
                     <li class="social__item">
                         <a href="" class="social__link d-flex align-center align-middle">
                             <i class="icon-telegram"></i>
@@ -87,7 +118,8 @@
                         <a href="#contacts">Контакти</a>
                     </li>
                 </ul>
-                <a href="" class="btn-consultation open-popup" data-rel="cta">Замовити дзвінок <i class="icon-ar-top"></i> </a>
+                <a href="" class="btn-consultation open-popup d-none d-lg-inline-block" data-rel="cta">Замовити дзвінок
+                    <i class="icon-ar-top"></i> </a>
 
 
             </div>
@@ -99,7 +131,8 @@
 
     <section class="s-hero">
         <div class="s-hero__bg">
-            <img class="bg" src="assets/img/hero.png" alt="image">
+            <img class="bg d-none d-lg-block" src="assets/img/hero.png" alt="image">
+            <img class="bg mobile d-block d-lg-none" src="assets/img/hero-mobil.png" alt="img">
         </div>
         <div class="container overlap">
             <div class="s-hero__content  ">
@@ -109,34 +142,36 @@
                 <div class="description text-regular">Дозвіл на початок будівництва, погодження інженерних мереж та
                     техумови,зміна цільового призначення
                 </div>
+                <div class="cta --relative">
+                    <div class="cta__heading text-bold text-center">Замовити консультацію</div>
+                    <form>
+                        <div class="row m-row align-center">
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column ">
+                                <div class="form-control">
+                                    <input class="form-control__input " type="text" name="" value=""
+                                           placeholder="І’мя" title="">
+                                </div>
+                            </div>
+                            <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column ">
+                                <div class="form-control">
+                                    <input class="form-control__input " type="tel" name="" value=""
+                                           placeholder="+ 38 (_ _ _) _ _ _ - _ _ - _ _" title="">
+                                </div>
+                            </div>
 
-                <form>
-                    <div class="row m-row align-center">
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column ">
-                            <div class="form-control">
-                                <input class="form-control__input " type="text" name="" value=""
-                                       placeholder="І’мя" title="">
+                        </div>
+                        <div class="row m-row">
+                            <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column d-flex align-center">
+                                <button type="submit" class="btn btn-primary">
+                                    <span>Надіслати</span>
+                                    <i class="icon-ar-top"></i>
+                                </button>
+
+
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column ">
-                            <div class="form-control">
-                                <input class="form-control__input " type="tel" name="" value=""
-                                       placeholder="+ 38 (_ _ _) _ _ _ - _ _ - _ _" title="">
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="row m-row">
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column d-flex align-center">
-                            <button type="submit" class="btn btn-primary">
-                                <span>Надіслати</span>
-                                <i class="icon-ar-top"></i>
-                            </button>
-
-
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
@@ -770,7 +805,7 @@
     </section>
 
     <section class="s-certificates swiper-entry">
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
                     <h3 class="heading h1 text-center decor text-extrabold --relative">Наші сертифікати</h3>
@@ -779,7 +814,7 @@
             <div class="row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
                     <div class="swiper-container"
-                         data-options='{"loop":true,"slidesPerView": 1, "spaceBetween": 15,"centeredSlides": false,
+                         data-options='{"loop":true,"slidesPerView": 2, "spaceBetween": 15,"centeredSlides": false,
                          "breakpoints": {
 
                          "600": {"slidesPerView":2},
@@ -853,7 +888,7 @@
     </section>
 
     <section class="s-client swiper-entry">
-        <div class="container">
+        <div class="container overlap">
             <div class="row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
                     <h3 class="heading h1 text-center decor text-extrabold --relative">Нам довіряють</h3>
@@ -862,13 +897,13 @@
             <div class="row">
                 <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16">
                     <div class="swiper-container"
-                         data-options='{"loop":true,"slidesPerView": 1, "spaceBetween": 15,"centeredSlides": false,
+                         data-options='{"loop":true,"slidesPerView": 2, "spaceBetween": 15,"centeredSlides": false,
                          "breakpoints": {
 
                          "600": {"slidesPerView":2},
 
                          "767": {"slidesPerView": 3, "spaceBetween": 15,"centeredSlides": false,"loop":false},
-                         "1200": {"slidesPerView": 6,"centeredSlides": false,"loop":true, "spaceBetween": 0}}}'>
+                         "1200": {"slidesPerView": 6,"centeredSlides": false,"loop":true, "spaceBetween": 25}}}'>
 
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -986,7 +1021,6 @@
     </section>
 
     <section class="s-cta --relative">
-
         <div class="container overlap">
             <div class="row m-row s-cta__inner d-flex align-middle">
                 <div class="col-xl-7 col-lg-6 col-md-7 col-sm-16 col-xs-16 column">
@@ -1014,8 +1048,14 @@
                             <textarea rows="4" class="form-control__textarea" name="message"
                                       placeholder="Текст"></textarea>
                             </div>
-                            <input type="submit" value="Надіслати"
-                                   class="btn btn-primary form-control__btn">
+                            <!--<input type="submit" value="Надіслати"
+                                   class="btn btn-primary form-control__btn">-->
+
+
+                            <button type="submit" class="btn btn-primary form-control__btn">
+                                <span>Надіслати</span>
+                                <i class="icon-ar-top"></i>
+                            </button>
                         </form>
                     </div>
                 </div>
@@ -1030,6 +1070,7 @@
 
 
 </main>
+
 
 <footer class="footer">
 
@@ -1055,7 +1096,7 @@
                         <div class="contact-links__wrapp">
                             <div class="h6 title">Телефон:</div>
                             <ul class="contact-links">
-                                <li><a href="">Телефон:
+                                <li><a href="">
                                     (067) 676-70-18</a></li>
                             </ul>
                         </div>
@@ -1114,171 +1155,33 @@
     </div>
 </footer>
 
+<div class="btn-call d-flex align-middle align-center"><img src="assets/img/call.svg" alt=""></div>
+
+<img class="decor-bottom" src="assets/img/decor-bottom.svg" alt="image">
+
 <div class="popup-wrapper">
     <div class="bg-layer"></div>
 
     <div class="popup-content" data-rel="cta">
         <div class="layer-close"></div>
         <div class="popup-container size-1">
+
+            <img class="decor-bg" src="assets/img/decor-modal.png" alt="image">
             <div class="btn-close d-flex align-middle align-center"><i class="icon-close"></i>
             </div>
 
-            <div class="popup-form text-center">
-                <h4 class="popup-form__heading heading-font text-bold">3воротній дзвінок</h4>
+            <div class="popup-form text-center overlap">
+                <h4 class="popup-form__heading heading h1 text-center decor text-extrabold --relative">3воротній
+                    дзвінок</h4>
                 <form>
                     <div class="row m-row">
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
+                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column">
                             <div class="form-control">
                                 <input class="form-control__input" type="text" name="" value=""
                                        placeholder="Ім’я, призвіще *"
                                        title="">
                             </div>
                         </div>
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <div class="form-control">
-                                <input class="form-control__input" type="tel" name="" value=""
-                                       placeholder="Номер телефону"
-                                       title="">
-                            </div>
-                        </div>
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <input type="submit" value="Відправити" class="btn btn-primary">
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="popup-content cta" data-rel="reserve">
-        <div class="layer-close"></div>
-        <div class="popup-container">
-            <div class="btn-close d-flex align-middle align-center"><i class="icon-close"></i>
-            </div>
-
-            <div class="popup-form text-center">
-                <h4 class="popup-form__heading heading-font text-bold">3абронювати</h4>
-                <form>
-
-                    <div class="row m-row">
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <div class="form-control">
-                                <select name="country" class="form-control__select default">
-                                    <option value="">Вибрати корпус</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <div class="form-control">
-                                <select name="country" class="form-control__select default">
-                                    <option value="">Вибрати номер</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row m-row">
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-xs-8 column">
-                            <div class="form-control">
-                                <select name="country" class="form-control__select default">
-                                    <option value="">Дорослі</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-xs-8 column">
-                            <div class="form-control">
-                                <select name="country" class="form-control__select default">
-                                    <option value="">Діти</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-xs-8 column">
-                            <div class="form-control">
-                                <select name="country" class="form-control__select default">
-                                    <option value="">Дорослі</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-8 col-xs-8 column">
-                            <div class="form-control">
-                                <select name="country" class="form-control__select default">
-                                    <option value="">Діти</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-row">
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <div class="form-control">
-                                <input class="form-control__input" type="text" name="" value=""
-                                       placeholder="Ім’я, призвіще *"
-                                       title="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-row">
                         <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column">
                             <div class="form-control">
                                 <input class="form-control__input" type="tel" name="" value=""
@@ -1286,25 +1189,12 @@
                                        title="">
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-16 col-xs-16 column">
-                            <div class="form-control">
-                                <input class="form-control__input" type="email" name="" value=""
-                                       placeholder="E-mail"
-                                       title="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-row">
                         <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <div class="form-control">
-                                    <textarea rows="5" class="form-control__textarea" name="message"
-                                              placeholder="Текст"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row m-row">
-                        <div class="col-xl-16 col-lg-16 col-md-16 col-sm-16 col-xs-16 column">
-                            <input type="submit" value="Забронювати" class="btn btn-primary">
+
+                            <button type="submit" class="btn btn-primary form-control__btn">
+                                <span>Надіслати</span>
+                                <i class="icon-ar-top"></i>
+                            </button>
                         </div>
                     </div>
                 </form>

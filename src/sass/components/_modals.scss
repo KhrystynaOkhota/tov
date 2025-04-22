@@ -8,25 +8,31 @@
 .popup {
   &-form {
     &__heading {
-      @include fontSize(35, 40);
-      margin-bottom: 15px;
-      color: rgba(49, 58, 87, 1);
+      @include fontSize(30, 40);
+      margin-bottom: 30px;
+      color: rgba(1, 32, 61, 1);
+      padding-bottom: 21px;
     }
 
     & .btn-primary {
+      background: rgba(150, 0, 1, 1);
+      color: $white-color;
       width: 100%;
       max-width: 304px;
+      margin-top: 10px;
+
+      & i {
+        color: $white-color;
+      }
     }
 
     & .form-control {
       margin-bottom: 20px;
 
       &__input, &__textarea {
-        border: 1px solid rgba(178, 144, 124, 0.2);
+        border: 1px solid rgba(221, 223, 226, 1);
         padding: 14.5px 20px 13.5px 20px;
-        border-radius: 30px;
       }
-
     }
   }
 
@@ -61,7 +67,8 @@
       top: -100px;
       right: 0;
       bottom: -100px;
-      background: rgba(51, 51, 49, 0.7);
+      backdrop-filter: blur(22px);
+      background: rgba(0, 14, 26, 0.9);
       -webkit-transition: all .3s ease-out;
       -o-transition: all .3s ease-out;
       transition: all .3s ease-out;
@@ -70,22 +77,22 @@
 
     & .btn-close {
       position: absolute;
-      width: 24px;
-      height: 24px;
-      top: 27px;
-      right: 28px;
-
+      width: 18px;
+      height: 18px;
+      top: 23px;
+      right: 23px;
       cursor: pointer;
+      z-index: 2;
 
       & i {
-        font-size: 22px;
-        color: rgba(49, 58, 87, 1);
+        font-size: 18px;
+        color: rgba(108, 114, 126, 1);
         @include transition(.4);
       }
 
       &:hover {
         & i {
-          color: $accent-color;
+          color: #FEF338;
         }
       }
     }
@@ -98,12 +105,12 @@
     max-width: 950px;
     margin: auto;
     position: relative;
-    border-radius: 50px;
+    border-radius: 30px;
     background: $white-color;
-    padding: 33px 81px 43px 81px;
+    padding: 40px 40px 60px 40px;
 
     &.size-1 {
-      max-width: 630px;
+      max-width: 709px;
     }
 
 
@@ -118,6 +125,14 @@
       max-width: 90%;
 
     }
+
+
+    & .decor-bg {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
   }
 
   &-content {

@@ -12,7 +12,7 @@ html:not(.touch-screen)::-webkit-scrollbar-track, html:not(.touch-screen) *::-we
 }
 
 html:not(.touch-screen)::-webkit-scrollbar-thumb, html:not(.touch-screen) *::-webkit-scrollbar-thumb {
-  background-color: $accent-color !important;
+  background-color: #67b02c !important;
 }
 
 
@@ -225,8 +225,10 @@ body {
       &:after {
         display: none;
       }
-width: 21px;
+
+      width: 21px;
       height: 21px;
+
       i {
         color: rgba(221, 223, 226, 1);
         font-size: 21px;

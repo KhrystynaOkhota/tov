@@ -50,7 +50,9 @@
 
 .heading {
   padding-bottom: 26px;
-
+  @media (max-width: $breakpoint-lg) {
+    padding-bottom: 11px;
+  }
   &.decor {
     &:after {
       content: '';
@@ -81,7 +83,9 @@
 .text{
   @include fontSize(16, 18);
 }
-
+.icon-close:before {
+  content: "\e906";
+}
 .icon-ar-left:before {
   content: "\e903";
 }

@@ -6,6 +6,7 @@
   //height: 100vh;
   @media (max-width: $breakpoint-lg) {
     height: auto;
+    padding-top: 220px;
   }
 
   & .decor-line {
@@ -28,7 +29,9 @@
       height: 100%;
       width: 100%;
       object-fit: cover;
-
+      @media (max-width: $breakpoint-lg) {
+        object-position: top;
+      }
     }
   }
 
@@ -42,15 +45,19 @@
 
     @media (max-width: $breakpoint-lg) {
 
-      padding: 125px 0 102px 0;
+      padding: 23px 15px 40px 23px;
+      max-width: calc(100% + 30px);
+      width: calc(100% + 30px);
+      position: relative;
+      left: -15px;
     }
 
     & .heading {
       @include fontSize(29, 45);
       color: $white-color;
-      margin-bottom: 20px;
+      padding-bottom: 20px;
       @media (max-width: $breakpoint-md) {
-        margin-bottom: 7px;
+        padding-bottom: 7px;
       }
     }
 
@@ -66,79 +73,81 @@
 
   }
 
-  .search-form {
-    max-width: 75%;
-    margin: 0 auto;
-    background: $white-color;
-    border-radius: 90px;
-    border: 15px solid rgba(0, 0, 0, 0.4);
+  .cta {
+    padding-top: 34px;
     @media (max-width: $breakpoint-md) {
-      border-width: 10px;
-      max-width: 100%;
+      padding-top: 24px;
     }
 
-    &__input {
-      width: 100%;
-      height: 100%;
-      border: none;
-      background: transparent;
-      padding: 20px 135px 20px 15px;
-      font-size: 17px;
-      color: rgba(178, 144, 124, 1);
-      @media (max-width: $breakpoint-md) {
-        padding: 15px 50px 15px 15px;
-      }
-
-      &::-webkit-input-placeholder {
-        font-size: 17px;
-        color: rgba(178, 144, 124, 1);
-
-        opacity: 1;
-        transition: opacity 0.5s;
-      }
-
-      &::-moz-placeholder {
-        font-size: 17px;
-        color: rgba(178, 144, 124, 1);
-
-        opacity: 1;
-        transition: opacity 0.5s;
-      }
-
-      &:-ms-input-placeholder {
-        font-size: 17px;
-        color: rgba(178, 144, 124, 1);
-
-        opacity: 1;
-        transition: opacity 0.5s;
-      }
-
-    }
-
-    & .btn-search {
+    &:before {
+      content: '';
+      width: calc(100% + 40px);
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2);
       position: absolute;
-      right: 5px;
-      top: 50%;
-      transform: translateY(-50%);
-      outline: none;
-      cursor: pointer;
-      @media (max-width: $breakpoint-md) {
-        right: 0;
-        padding: 0;
-        width: 50px;
-        height: 50px;
+      left: -20px;
+      top: 0;
+    }
+
+    &__heading {
+
+      @include fontSize(25, 30);
+      padding-bottom: 23px;
+      color: $white-color;
+      @media (max-width: $breakpoint-lg) {
+        padding-bottom: 14px;
+      }
+    }
+
+    & .btn-primary {
+      min-width: 223px;
+      @media (min-width: $breakpoint-lg) {
+        margin-top: 30px;
+      }
+    }
+
+    & .form-control {
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 20px;
       }
 
-      & i {
-        @media (min-width: $breakpoint-md) {
-          display: none;
-        }
+      &__input {
+        background: rgba(0, 0, 0, 0.3);
+        color: rgba(255, 255, 255, 1);
+        border: 1px solid rgba(221, 223, 226, 0.4);
       }
 
-      & span {
-        @media (max-width: $breakpoint-md) {
-          display: none;
-        }
+      & ::-webkit-input-placeholder {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 100%;
+        color: $white-color;
+        font-family: $primary-font;
+
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+
+      & ::-moz-placeholder {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 100%;
+        color: $white-color;
+        font-family: $primary-font;
+
+        opacity: 1;
+        transition: opacity 0.5s;
+      }
+
+      & :-ms-input-placeholder {
+        font-size: 17px;
+        font-weight: 300;
+        line-height: 100%;
+        color: $white-color;
+        font-family: $primary-font;
+
+        opacity: 1;
+        transition: opacity 0.5s;
       }
     }
   }
@@ -236,6 +245,9 @@
 
   & .heading {
     margin-bottom: 39px;
+    @media (max-width: $breakpoint-md) {
+      margin-bottom: 17px;
+    }
   }
 
   & .description {
@@ -250,6 +262,7 @@
       display: inline-block;
       width: 100%;
       font-size: 17px;
+      padding-top: 10px;
     }
   }
 
@@ -360,6 +373,11 @@
     @media (max-width: $breakpoint-md) {
       padding: 16px 30px 20px 30px;
       text-align: center;
+      bottom: 0;
+      margin: 0;
+      border-radius: 0;
+      width: calc(100% + 30px);
+      left: -15px;
     }
 
     &:before {
@@ -374,21 +392,21 @@
 
     &__title {
 
-      @include fontSize(20,25);
+      @include fontSize(20, 25);
 
       margin-bottom: 17px;
     }
 
     &__description {
-      @include fontSize(15,18);
+      @include fontSize(15, 18);
       @media (max-width: $breakpoint-md) {
-       margin-bottom: 9px;
+        margin-bottom: 9px;
       }
     }
 
     &__price {
       background: #f5f7f8;
-      @include fontSize(22,25);
+      @include fontSize(22, 25);
       min-height: 130px;
       width: 100%;
       text-align: center;
@@ -415,6 +433,9 @@
 
 .s-about {
   padding: 135px 0 108px 0;
+  @media (max-width: $breakpoint-lg) {
+    padding: 41px 0 50px 0;
+  }
 
   & .heading {
     margin-bottom: 31px;
@@ -427,13 +448,16 @@
 
   & .description {
     margin-bottom: 20px;
-    font-size: 18px;
-    line-height: 1.2;
+    @include fontSize(15, 18);
+    line-height: 1.66;
   }
 
   &__gallery {
     border-radius: 10px;
     overflow: hidden;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 24px;
+    }
 
     & .gallery {
       &__img {
@@ -443,10 +467,15 @@
   }
 
   & .benefit {
+    &__icon {
+      margin-top: 4px;
+    }
 
     &__title, &__text {
-      font-size: 18px;
+
+      @include fontSize(15, 18);
       color: rgba(75, 75, 75, 1);
+      line-height: 1.66;
     }
 
     &__title {
@@ -489,6 +518,9 @@
 .s-step-work {
   padding: 88px 0 94px 0;
   //border-top: 1px solid rgba(108, 114, 126, 0.2);
+  @media (max-width: $breakpoint-lg) {
+    padding: 60px 0 44px 0;
+  }
 
   &:before {
     content: '';
@@ -504,6 +536,9 @@
 
   & .heading {
     margin-bottom: 53px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 20px;
+    }
   }
 
   & .step {
@@ -511,6 +546,10 @@
       display: grid;
       grid-template-columns: repeat(6, 1fr);
       gap: 20px;
+      @media (max-width: $breakpoint-lg) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 15px;
+      }
     }
 
     &__number {
@@ -527,15 +566,39 @@
     }
 
     &__heading {
+      @include fontSize(15, 17);
+      line-height: 1.47;
+      color: rgba(108, 114, 126, 1);
     }
 
     &__icon {
+      width: 70%;
+
       &-wrap {
         height: 114px;
         width: 114px;
         border-radius: 100%;
         margin: 0 auto 10px auto;
         border: 1px solid rgba(103, 176, 44, 1);
+        @media (max-width: $breakpoint-lg) {
+          margin-bottom: 0;
+        }
+
+        &:before {
+          content: '';
+          width: calc(100% - 24px);
+          height: calc(100% - 24px);
+          background: $white-color;
+          box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          border-radius: 100%;
+          transform: translate(-50%, -50%);
+          z-index: -1;
+
+
+        }
       }
     }
   }
@@ -544,9 +607,15 @@
 .s-certificates {
   background: rgba(245, 247, 248, 1);
   padding: 88px 0 99px 0;
+  @media (max-width: $breakpoint-lg) {
+    padding: 40px 0 50px 0;
+  }
 
   & .heading {
     margin-bottom: 37px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 20px;
+    }
   }
 
   & .certificate {
@@ -576,20 +645,38 @@
   & .swiper {
     &-controls {
       margin-top: 40px;
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 30px;
+      }
     }
   }
 }
 
 .s-client {
   padding: 86px 0 108px 0;
+  @media (max-width: $breakpoint-lg) {
+    padding: 40px 0 50px 0;
+  }
 
   & .heading {
     margin-bottom: 40px;
+    @media (max-width: $breakpoint-lg) {
+      margin-bottom: 0;
+    }
   }
 
   & .swiper {
+    &-container {
+      width: calc(100% + 30px);
+      padding: 0 15px;
+      left: -15px;
+    }
+
     &-controls {
-      margin-top: 40px;
+      margin-top: 20px;
+      @media (max-width: $breakpoint-lg) {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -600,20 +687,27 @@
     transform: translate(-50%, -50%);
 
     &-wrap {
-      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
       padding-bottom: 60%;
       border-right: 10px;
       margin: 20px 0;
+      background: $white-color;
     }
   }
 }
 
 .s-cta {
   color: $white-color;
-
+  @media (max-width: $breakpoint-lg) {
+    padding: 0 0 80px 0;
+  }
 
   & .content {
     padding: 30px 0 30px 25px;
+    @media (max-width: $breakpoint-lg) {
+      padding: 24px 0 0 0;
+      text-align: center;
+    }
 
     & .heading, & .description {
       color: $white-color;
@@ -621,23 +715,30 @@
 
     & .heading {
       font-size: 42px;
+      @include fontSize(25, 42);
     }
 
     & .description {
-      font-size: 30px;
+      @include fontSize(18, 30);
     }
 
     & .send-materials {
       padding-top: 35px;
       margin-top: 35px;
+      @media (max-width: $breakpoint-lg) {
+        padding-top: 26px;
+        margin-top: 26px;
+      }
 
       &__title {
-        font-size: 20px;
+
+        @include fontSize(15, 20);
         margin-bottom: 20px;
       }
 
       &__link {
-        font-size: 17px;
+
+        @include fontSize(15, 17);
         color: rgba(254, 243, 56, 1);
       }
 
@@ -649,16 +750,23 @@
         position: absolute;
         top: 0;
         left: -40px;
+        @media (max-width: $breakpoint-lg) {
+          width: calc(100% + 30px);
+          left: -15px;
+        }
       }
     }
   }
 
 
   &__inner {
-    margin-top: 50px;
+
     background: rgba(103, 176, 44, 1);
     border-radius: 30px;
     //padding: 30px 10px;
+    @media (max-width: $breakpoint-lg) {
+      margin-top: 0;
+    }
   }
 
   &__bg {
@@ -682,6 +790,9 @@
 
   &__form {
     padding: 31px 0 34px 0;
+    @media (max-width: $breakpoint-lg) {
+      padding: 16px 0 53px 0;
+    }
 
     & .form-control {
       margin-bottom: 20px;
@@ -695,6 +806,9 @@
 
       &__btn {
         width: 100%;
+        @media (max-width: $breakpoint-lg) {
+          margin-top: 0;
+        }
       }
     }
 

@@ -252,7 +252,7 @@ jQuery(function () {
     }
     // Open menu
     $(document).on('click', '.h-burger', function () {
-        _functions.scrollWidth();
+        //_functions.scrollWidth();
         $('html').toggleClass('overflow-menu');
         $(this).closest('header').toggleClass('open-menu');
     });

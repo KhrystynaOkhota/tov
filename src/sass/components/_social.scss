@@ -42,11 +42,46 @@
       color: $whiteColor;
       @include fontSize(18, 20);
       @include transition(.4);
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      &:before {
+        z-index: 3;
+        position: relative;
+      }
+
+      &.icon-telegram {
+        &:after {
+          background: rgba(39, 166, 229, 1);
+        }
+      }
+
+      &.icon-whatsapp {
+        &:after {
+          background: rgba(103, 176, 44, 1);
+        }
+      }
+
+      &.icon-viber {
+        &:after {
+          background: rgba(124, 80, 154, 1);
+        }
+      }
     }
 
     & a {
       height: 100%;
       width: 100%;
+      position: relative;
     }
 
     &:hover {

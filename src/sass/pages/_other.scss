@@ -1,234 +1,85 @@
 @import "../abstracts/mixins";
 @import "../abstracts/variables";
 
-.s-other {
-  @media (max-width: $breakpoint-md) {
-    margin-top: 80px;
-  }
-
-  & .decor-bg {
-    width: 100%;
-    max-width: 402px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    @media (max-width: $breakpoint-md) {
-      max-width: 286px;
-      right: -15px;
-      transform: none;
-    }
-  }
-
-  &__content {
-    padding-left: 20px;
-    @media (max-width: $breakpoint-md) {
-      padding-left: 12px;
-    }
-  }
-
-  &__inner {
-    height: 100vh;
-    @media (min-width: $breakpoint-md) {
-      flex-direction: row-reverse;
-
-    }
-    @media (max-width: $breakpoint-md) {
-      height: auto;
-    }
-  }
-
-  & .img {
-    width: 100%;
-    max-width: 380px;
-    @media (max-width: $breakpoint-md) {
-      max-width: 260px;
-    }
-    @media (max-width: 400px) {
-      max-width: 220px;
-    }
-    margin: 0 auto;
-  }
-
-  & .heading {
-    @include fontSize(32, 64);
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 14px;
-    }
-  }
-
-  & .description {
-    @include fontSize(20, 32);
-    margin-bottom: 31px;
-    @media (max-width: $breakpoint-md) {
-      margin-bottom: 13px;
-    }
-  }
-
-  & .btn-primary {
-    margin: 0 auto;
-  }
-
-  &.thanks {
-    & .heading {
-      margin-bottom: 6px;
-    }
-  }
-
-  &.error {
-    & .heading {
-      margin-bottom: 30px;
-
-    }
-  }
-
-
-}
-
-.s-error, .s-thanks {
-  position: relative;
-  height: 100vh;
-
-  & .logo__wrap {
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
-    @media (max-width: $breakpoint-md) {
-      width: 180px;
-      height: 70px;
-    }
-  }
-
-  & .content {
-    position: absolute;
-    z-index: 3;
-    bottom: 20%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    @media (max-width: $breakpoint-md) {
-      width: 100%;
-    }
-
-    & .heading, & .description {
-      color: $white-color;
-    }
-  }
-}
-
-
 .s-thanks {
-
+  height: 100vh;
   padding-top: 86px;
-
-  & .logo__wrap {
-    width: 340px;
-    height: 133px;
+  @media (max-width: $breakpoint-lg) {
+    padding-top: 18px;
   }
 
-  & .bg {
-    position: absolute;
-    top: 0;
-    lefT: 0;
-    height: 100%;
-    width: 100%;
-    z-index: 1;
-  }
-
-  & .content {
-
-
-    & .heading {
-      @include fontSize(45, 120);
-      margin-bottom: 43px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 19px;
-      }
-    }
-
-    & .description {
-      @include fontSize(20, 30);
-      margin-bottom: 45px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 20px;
-      }
-    }
-
-    & .btn-primary {
-
-    }
-  }
-}
-
-.s-error {
-  padding-top: 44px;
-
-  & .logo__wrap {
-    width: 255px;
-    height: 100px;
-
-  }
-
-  & .content {
-    & .heading, .description, .btn-primary {
-      z-index: 9;
-      position: relative;
-    }
-
-    & .heading {
-      @include fontSize(45, 70);
-      margin-bottom: 30px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 15px;
-      }
-
-    }
-
-    & .description {
-      @include fontSize(20, 30);
-      margin-bottom: 45px;
-      @media (max-width: $breakpoint-md) {
-        margin-bottom: 20px;
-      }
-    }
-
-    & .btn-primary {
-
-    }
-
-    & .img-404 {
-      max-width: 680px;
-      margin: 0 auto 40px auto;
-      position: relative;
-      z-index: 2;
-    }
-  }
-
-  & .bg {
+  & .decor {
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 1;
+    opacity: .5;
+  }
+
+  & .logo {
+    object-fit: contain;
+    object-position: center;
     height: 100%;
     width: 100%;
 
-    &:nth-child(1) {
-      z-index: 1;
+    &__wrap {
+      width: 223px;
+      height: 212px;
+      display: block;
+      @media (max-width: $breakpoint-lg) {
+        margin: 0 auto 41px auto;
+        width: 121px;
+        height: 115px;
+      }
     }
-    &:nth-child(2) {
-      z-index: 3;
-    }
+  }
 
-    &:nth-child(2) {
-
-    }
+  & .bg {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
 
     &__wrap {
+      max-height: calc(100vh - 260px);
       position: absolute;
-      top: 0;
-      lefT: 0;
-      height: 100%;
-      width: 100%;
+      bottom: 0;
+      width: 110%;
+      left: -5%;
+      @media (max-width: $breakpoint-lg) {
+        height: 550px;
+        width: 150%;
+        left: 0;
+      }
+    }
+  }
+
+  & .content {
+    @media (max-width: $breakpoint-lg) {
+      text-align: center;
+    }
+
+    & .heading {
+      @include fontSize(40, 70);
+      margin-bottom: 25px;
+      padding: 0;
+    }
+
+    & .description {
+      @include fontSize(20, 35);
+      margin-bottom: 35px;
+      @media (max-width: $breakpoint-lg) {
+        margin-bottom: 32px;
+      }
+    }
+
+    & .btn-primary {
+      min-width: 223px;
+      background: rgba(150, 0, 1, 1);
+      color: $white-color;
+
+      & i {
+        color: $white-color;
+      }
     }
   }
 }

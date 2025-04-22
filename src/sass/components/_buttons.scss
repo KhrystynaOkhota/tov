@@ -29,8 +29,8 @@
 
     & i {
       position: absolute;
-      right:15px;
-      top:50%;
+      right: 15px;
+      top: 47%;
       transform: translateY(-50%);
       font-size: 17px;
       color: rgba(1, 32, 61, 1);
@@ -50,6 +50,23 @@
 
     }
   }
+
+  &-call {
+    width: 88px;
+    height: 88px;
+    border-radius: 100%;
+    border: 10px solid rgba(255, 255, 255, 0.6);
+    background: #67b02c;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 5;
+    @media (max-width: $breakpoint-lg) {
+      right: 15px;
+      bottom: 15px;
+    }
+  }
 }
+
 
 
