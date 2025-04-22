@@ -563,13 +563,13 @@ body.overflow-hidden {
       padding-right: 15px; }
       .header .container:before {
         content: '';
-        width: 96%;
+        width: calc(100% - 20px);
         height: 88%;
         background: #fff;
         border-radius: 10px;
         position: absolute;
         top: 6%;
-        left: 2%;
+        left: 10px;
         z-index: -1; } }
   @media (max-width: 991px) {
     .header__top {
@@ -603,9 +603,7 @@ body.overflow-hidden {
     @media (max-width: 991px) {
       .header__main {
         order: 1;
-        margin-top: 0; } }
-    @media (max-width: 1199px) {
-      .header__main {
+        margin-top: 0;
         padding: 36px 0 36px 0; } }
     .header__main .menu {
       position: relative;
@@ -905,6 +903,9 @@ body.overflow-hidden {
       transition: all 0.5s ease-out; }
       .footer__bottom .footer-links a:hover {
         color: #edc162; }
+  @media (max-width: 991px) {
+    .footer__bottom .develop {
+      margin-top: 10px; } }
   .footer__bottom .develop__text, .footer__bottom .develop__link {
     font-size: 16px;
     font-size: -webkit-calc(13px + (16 - 13) * ((100vw - 300px) / (1920 - 300)));
@@ -923,7 +924,8 @@ body.overflow-hidden {
       color: #edc162; }
   @media (max-width: 991px) {
     .footer__bottom .develop, .footer__bottom .footer-links {
-      justify-content: center; } }
+      justify-content: left;
+      width: 100%; } }
   .footer .logo__link {
     display: block;
     max-width: 145px; }
@@ -950,13 +952,17 @@ body.overflow-hidden {
     @media (max-width: 991px) {
       .footer .contact-links__wrapp {
         display: flex;
-        margin-bottom: 20px; } }
+        margin-bottom: 20px;
+        align-items: center; } }
     .footer .contact-links__wrapp .title {
       font-weight: bold;
       margin-bottom: 10px; }
       @media (max-width: 991px) {
         .footer .contact-links__wrapp .title {
           margin-bottom: 0; } }
+  @media (max-width: 991px) {
+    .footer .social__list {
+      margin-left: 15px; } }
   @media (min-width: 991px) {
     .footer .social__list {
       -webkit-box-pack: end;
