@@ -151,6 +151,14 @@
       }
     }
   }
+
+  & .decor-hero {
+    position: absolute;
+    z-index: 9;
+    top: -38px;
+    left: 23px;
+
+  }
 }
 
 .s-benefit {

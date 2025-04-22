@@ -293,10 +293,8 @@ body.overflow-hidden {
   overflow: hidden;
   position: relative; }
 
-.main {
-  overflow: hidden; }
-  .main-wrapper {
-    z-index: 1; }
+.main-wrapper {
+  z-index: 1; }
 
 .swiper-container {
   margin-left: auto;
@@ -2974,6 +2972,11 @@ select:-webkit-autofill:focus {
       font-family: "Inter", sans-serif;
       opacity: 1;
       transition: opacity 0.5s; }
+  .s-hero .decor-hero {
+    position: absolute;
+    z-index: 9;
+    top: -38px;
+    left: 23px; }
 
 .s-benefit {
   padding: 100px 0; }
